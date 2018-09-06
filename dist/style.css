@@ -1,0 +1,99 @@
+#app {
+    background: #f3f3f3;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.issues-list {
+    margin: 20px 0;
+}
+
+.issue-wrapper:nth-child(5n+1) {
+    clear: left;
+}
+
+.issues-list::after {
+    content: '';
+    clear: both;
+    display: block;
+} 
+
+.issues-list .plus-sign {
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+.issues-list .plus-sign::before {
+    content: ''
+}
+
+.issues-list .plus-sign::after {
+    content: '';
+}
+
+.issue-wrapper {
+    float: left;
+    padding: 5px;
+    width: 20%;
+    /*background: #fff;*/
+}
+
+.issue-wrapper .inner {
+    background: #fff;
+}
+
+.issue-wrapper .bar {
+    height: 30px;
+    background: #E81123;
+    position: relative;
+}
+
+.issue-wrapper .bar.task-open, .issue-wrapper .task-open .counter {
+    background: #026E94;
+}
+
+.issue-wrapper .bar.task-pending, .issue-wrapper .task-pending .counter {
+    background: #B5019E;
+}
+
+.issue-wrapper .bar.task-close, .issue-wrapper .task-close .counter {
+    background: #E81123;
+}
+
+.issue-wrapper .bar .counter {
+    color: #fff;
+    line-height: 31px;
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #FFF;
+    position: absolute;
+    bottom: -15px;
+    left: 15px;
+}
+
+.issue-wrapper .issue-header {
+    border-bottom: 2px solid #f3f3f3;
+    margin-top: 15px;
+    padding: 5px 10px;
+    height: 84px;
+    overflow: hidden;
+}
+
+.issue-wrapper .issue-header h2 {
+    font-size: 20px;
+    color: #848484;
+    margin-bottom: 0;
+}
+
+.issue-wrapper .issue-content {
+    padding: 5px 10px 25px;
+}
+
+.issue-wrapper .issue-content p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
